@@ -19,11 +19,8 @@ int main(int argc, const char * argv[]) {
     const string algo = argv[1];
     const int runs = stoi(argv[2]);
     const int iterations = stoi(argv[3]);
-    //const int bits = stoi(argv[4]);
-    
     string filename= argv[4];
     cout<<"filename: "<<filename<<endl;
-    
     const int population = stoi(argv[5]);
     const double F = stod(argv[6]);
     const double Cr = stod(argv[7]);
