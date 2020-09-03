@@ -11,7 +11,6 @@
 void execute(const int Algo,const int runs,const int generations,const string filename,const int population,const double F,const double Cr, const double L, const double H,const int dim){
     srand((unsigned)time(NULL));
     vector<double> avg(generations/block);
-    //float avg=0;
     if (filename==""){
         for (int i=0;i<runs;i++){
             cout<<"----------------------------------------"<<endl;
@@ -21,18 +20,10 @@ void execute(const int Algo,const int runs,const int generations,const string fi
                 DE *r = new DE(generations, population, F, Cr, L, H, dim);
                 start = time(NULL);
                 r->Ackley();
-                //r->get_result();
                 for (int j=0;j<generations/block;j++){
                     avg[j] += r->get_result_value(j*block);
                 }
                 cout<<"Best: "<<r->get_result_value(generations-1)<<endl;
-                
-                //avg+=r->get_best();
-                //cout<<"best: "<<r->get_best()<<endl;
-                //cout<<"best route: ";
-                //r->print_bestroute();
-                //cout<<"to file"<<endl;
-                //r->to_file();
                 cout<<endl;
                 end = time(NULL);
             }
