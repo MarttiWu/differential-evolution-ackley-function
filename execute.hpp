@@ -16,7 +16,7 @@
 
 using namespace std;
 
-const int block = 1;
+const int block = 10;
 
 void execute(const int Algo,const int runs,const int generations,const string filename,const int population,const double F,const double Cr, const double L, const double H,const int dim);
 
